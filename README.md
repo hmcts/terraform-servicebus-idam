@@ -1,1 +1,1 @@
-# moj-servicebus-idam
+# Azure Service Bus for IdAM
