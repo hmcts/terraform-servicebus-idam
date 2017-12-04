@@ -20,15 +20,15 @@ module "private_beta_activation_topic" {
   // TODO: reference a specific release
   source                = "git@github.com:hmcts/terraform-module-servicebus-topic.git"
   name                  = "reform.private-beta.account.activation"
-  resource_group_name   = "${local.namespace_name}"
-  namespace_name        = "${local.resource_group_name}"
+  resource_group_name   = "${local.resource_group_name}"
+  namespace_name        = "${local.namespace_name}"
 }
 
 module "private_beta_activation_subscription" {
   // TODO: reference a specific release
   source                = "git@github.com:hmcts/terraform-module-servicebus-subscription.git"
   name                  = "reform.private-beta.account.activation"
-  resource_group_name   = "${local.namespace_name}"
-  namespace_name        = "${local.resource_group_name}"
+  resource_group_name   = "${local.resource_group_name}"
+  namespace_name        = "${local.namespace_name}"
   topic_name            = "${module.private_beta_activation_topic.name}"
 }
