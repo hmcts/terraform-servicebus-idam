@@ -2,4 +2,8 @@
 
 @Library('Infrastructure') _
 
-withInfrastructurePipeline('servicebus-idam')
+def product = "servicebus-idam"
+def environment = "nonprod"
+def subscription = "nonprod"
+
+withInfrastructurePipeline(product, environment, subscription)
